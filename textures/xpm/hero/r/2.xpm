@@ -1,0 +1,27 @@
+/* XPM */
+static char *rzvcdfsdadat[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 5 1 ",
+"  c black",
+". c #BE4A2F",
+"X c #E4A672",
+"o c white",
+"O c None",
+/* pixels */
+"OOOOO      OOOOO",
+"OOOO XXooXX OOOO",
+"OOO XXXXoXXX OOO",
+"OOO XXXXXXXX OOO",
+"OOO X..XXXXX OOO",
+"OOO ....XoX. OOO",
+"OOOO ..X.  . OOO",
+"OOOOO  X.o . OOO",
+"OOOOOO  .ooX OOO",
+"OOOOOO XX.  OOOO",
+"OOOOO ..oX. OOOO",
+"OOOO X.  XX OOOO",
+"OOOO XX  .X OOOO",
+"OOOOO     XX OOO",
+"OOOOOO .. .X OOO",
+"OOOOOO .   X OOO"
+};

@@ -1,0 +1,27 @@
+/* XPM */
+static char *re1zx1228128sult[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 5 1 ",
+"  c #5DC3F0",
+". c #71C9F3",
+"X c #85D0F7",
+"o c #AEDEFF",
+"O c #D0E8F8",
+/* pixels */
+"..         ..  .",
+".    ..  .....  ",
+"   oo...........",
+".   .... .XXX.. ",
+" .     . XXXXX  ",
+". ....   .ooo   ",
+" ........   .. .",
+"........ ... .. ",
+"....XoOooXX     ",
+" ....       ..XX",
+"X ..  ..   ..XXX",
+"   XX....  oOooX",
+"  XXXX...   ... ",
+"  oOOo..        ",
+"..              ",
+"...            ."
+};

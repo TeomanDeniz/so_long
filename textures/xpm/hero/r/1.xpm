@@ -1,0 +1,27 @@
+/* XPM */
+static char *reasdasd1132123sult[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 5 1 ",
+"  c black",
+". c #BE4A2F",
+"X c #E4A672",
+"o c white",
+"O c None",
+/* pixels */
+"OOOOO      OOOOO",
+"OOOO XXooXX OOOO",
+"OOO XXXXoXXX OOO",
+"OOO XXXXXXXX OOO",
+"OOO X....XXX OOO",
+"OOO ......Xo OOO",
+"OOOO ...X.   OOO",
+"OOOOO  .Xo . OOO",
+"OOOOOO   ooX OOO",
+"OOOOOO ..   OOOO",
+"OOOOOO .oo  OOOO",
+"OOOOOO XoX  OOOO",
+"OOOOOOO   . OOOO",
+"OOOOOOO .. . OOO",
+"OOOOOO XX .. OOO",
+"OOOOOO X O . OOO"
+};

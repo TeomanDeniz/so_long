@@ -1,0 +1,27 @@
+/* XPM */
+static char *d1221lt[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 5 1 ",
+"  c black",
+". c #BE4A2F",
+"X c #E4A672",
+"o c white",
+"O c None",
+/* pixels */
+"OOOOO      OOOOO",
+"OOOO XXooXX OOOO",
+"OOO XXXXoXXX OOO",
+"OOO XXXXXXXX OOO",
+"OOO XXXX...X OOO",
+"OOO XoX..... OOO",
+"OOO    .X.. OOOO",
+"OOO . o.X  OOOOO",
+"OOO Xoo.  OOOOOO",
+"OOOO  .Xo OOOOOO",
+"OOOO  XXX. OOOOO",
+"OOOO XX  . OOOOO",
+"OOOO X  XX OOOOO",
+"OOOO .. XX OOOOO",
+"OOOO .X   OOOOOO",
+"OOOOO X OOOOOOOO"
+};

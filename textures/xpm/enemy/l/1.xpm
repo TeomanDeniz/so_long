@@ -1,0 +1,28 @@
+/* XPM */
+static char *r31es23u1lt[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 6 1 ",
+"  c black",
+". c #ED1C24",
+"X c #596886",
+"o c #C0CCDC",
+"O c white",
+"+ c None",
+/* pixels */
+"+++++    +++++++",
+"++++ oOOo ++++++",
+"+++ oooOoo +++++",
+"+++ oooooo +++++",
+"+++ ooXXXo +++++",
+"+++ OXXXXX +++++",
+"+++ X.XoX ++++++",
+"+++ X.Xo  ++++++",
+"+++ oOO  +++++++",
+"+++++   X ++++++",
+"+++++ OOX ++++++",
+"++++  oOo ++++++",
+"++++ X   +++++++",
+"+++ X XX +++++++",
+"+++ XX oo ++++++",
+"+++ X + o ++++++"
+};

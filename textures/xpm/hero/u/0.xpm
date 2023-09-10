@@ -1,0 +1,27 @@
+/* XPM */
+static char *r12312ddafafsat[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 5 1 ",
+"  c black",
+". c #BE4A2F",
+"X c #E4A672",
+"o c white",
+"O c None",
+/* pixels */
+"OOOOO      OOOOO",
+"OOOO XXooXX OOOO",
+"OOO XXXXoXXX OOO",
+"OOO XXXXXXXX OOO",
+"OOO XXXXXXXX OOO",
+"OOO .XXXXXX. OOO",
+"OOO ........ OOO",
+"OOOO ...... OOOO",
+"OOOO        OOOO",
+"OOOO .    . OOOO",
+"OOO XXX..XXo OOO",
+"OO ..XXXXXX.. OO",
+"O X. .X..X. .X O",
+"O XX ...... XX O",
+"OO   .X  X.   OO",
+"OOOOO X  X OOOOO"
+};
