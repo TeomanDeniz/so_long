@@ -21,11 +21,12 @@
 #include "../../../libft/ft_math/ft_math.h" /*
 # double ft_fabs(double);
 # double ft_fmax(double, double);
-
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 
+/* *************************** [V] PROTOTYPES [V] *************************** */
 static inline void	npc_moving(t_mlx mlx, int ecx);
+/* *************************** [^] PROTOTYPES [^] *************************** */
 
 void
 	draw_monster(t_mlx mlx)
