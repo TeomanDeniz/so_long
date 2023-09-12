@@ -212,6 +212,13 @@ fclean: clean
 		echo " $(shell tput setab 1)$(shell tput setaf 11)$(NAME)$(shell tput setaf 15) deleted$(shell tput sgr0)" ; \
 		echo "" ; \
 	fi;
+	@if [ -a $(BONUS_NAME) ]; \
+	then \
+		rm -f $(BONUS_NAME) ; \
+		echo "" ; \
+		echo " $(shell tput setab 1)$(shell tput setaf 11)$(BONUS_NAME)$(shell tput setaf 15) deleted$(shell tput sgr0)" ; \
+		echo "" ; \
+	fi;
 	@if [ -a "so_long" ]; \
 	then \
 		rm -f "so_long" ; \
