@@ -42,8 +42,8 @@ void
 		if (npc_speed <= 1)
 			mlx->object.monster[ecx].animation = 0;
 		put_image(mlx, \
-			mlx->texture_pack.monster[mlx->object.monster[ecx].rotation][\
-			mlx->object.monster[ecx].animation], \
+			mlx->texture_pack.monster[(int)mlx->object.monster[ecx].rotation][\
+			(int)mlx->object.monster[ecx].animation], \
 			mlx->object.monster[ecx].x, \
 			mlx->object.monster[ecx].y);
 		if (mlx->fps % (long long)ft_fabs((50LL - \

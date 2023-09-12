@@ -32,7 +32,8 @@ void
 	if (player_speed <= 1)
 		animation = 0;
 	put_image(mlx, \
-		mlx->texture_pack.player[mlx->object.player.rotation][animation], \
+		mlx->texture_pack.player[\
+		(int)mlx->object.player.rotation][(int)animation], \
 		mlx->object.player.x, \
 		mlx->object.player.y);
 	if (mlx->fps % (long long)ft_fabs((50LL - \

@@ -39,7 +39,7 @@ void
 			(mlx->object.number_of_barriers / 12)))) == 0) && \
 			animation < (TS_GATE - 1))
 			animation++;
-		put_image(mlx, mlx->texture_pack.gate[animation], \
+		put_image(mlx, mlx->texture_pack.gate[(int)animation], \
 				mlx->object.gate.x, \
 				mlx->object.gate.y);
 	}

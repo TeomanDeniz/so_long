@@ -35,7 +35,7 @@ void
 	while (++ecx, ecx < mlx->object.number_of_walls)
 	{
 		wall_type = mlx->object.wall[ecx].texture_type;
-		put_image(mlx, mlx->texture_pack.wall[wall_type][animation], \
+		put_image(mlx, mlx->texture_pack.wall[wall_type][(int)animation], \
 			mlx->object.wall[ecx].x * TILE_WIDTH, \
 			mlx->object.wall[ecx].y * TILE_HEIGHT);
 	}

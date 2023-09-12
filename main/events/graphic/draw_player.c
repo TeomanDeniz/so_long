@@ -20,7 +20,8 @@
 void
 	draw_player(t_mlx mlx)
 {
-	put_image(mlx, mlx->texture_pack.player[mlx->object.player.rotation][0], \
+	put_image(mlx, mlx->texture_pack.player[\
+		(int)mlx->object.player.rotation][0], \
 		mlx->object.player.x, \
 		mlx->object.player.y);
 }

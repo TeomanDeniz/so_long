@@ -36,7 +36,7 @@ void
 	while (++ecx, ecx < coins)
 	{
 		if (mlx->object.coin[ecx].active)
-			put_image(mlx, mlx->texture_pack.coin[animation], \
+			put_image(mlx, mlx->texture_pack.coin[(int)animation], \
 				mlx->object.coin[ecx].x, \
 				mlx->object.coin[ecx].y);
 	}

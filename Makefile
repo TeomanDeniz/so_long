@@ -16,7 +16,7 @@ CC			=	gcc
 MLX			=	./minilibx/libmlx.a
 # [MINILIBX LIBRARY]
 
-FLAGS		=	-Imlx
+FLAGS		=	-Wall -Wextra -Werror -Imlx
 # [COMPILER FLAGS]
 
 MAIN_FLAGS	=	-Wall -Wextra -Werror -lmlx -framework OpenGL -framework AppKit -L./minilibx
