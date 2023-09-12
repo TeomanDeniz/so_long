@@ -44,10 +44,12 @@ void
 
 	old_x = 0.0 + old_x;
 	old_y = 0.0 + old_y;
-	if (old_x == 0.0)
+	if (old_x == 0.0 || old_x == 0.0)
+	{
 		old_x = mlx->object.player.x;
-	if (old_x == 0.0)
 		old_y = mlx->object.player.y;
+		return ;
+	}
 	delta_x = (mlx->object.player.x - old_x) / TILE_WIDTH;
 	delta_y = (mlx->object.player.y - old_y) / TILE_HEIGHT;
 	check_position_coins(mlx);
