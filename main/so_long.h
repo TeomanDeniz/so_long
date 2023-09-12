@@ -11,9 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
-# define SO_LONG_H 20230911L
-
-# include <stdio.h>
+# define SO_LONG_H 20230912L
 
 /* ******************** [V] CONSTANTS - TEXTURE SIZES [V] ******************* */
 # define TS_COIN 6
