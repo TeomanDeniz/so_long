@@ -24,7 +24,7 @@
 /* **************************** [^] INCLUDES [^] **************************** */
 
 /* **************************** [V] CONSTANTS [V] *************************** */
-#define FILE_GROUND "./textures/xpm/grousnd.xpm"
+#define FILE_GROUND "./textures/xpm/ground.xpm"
 /* **************************** [^] CONSTANTS [^] *************************** */
 
 void
