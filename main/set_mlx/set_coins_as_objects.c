@@ -60,5 +60,4 @@ static inline void
 	mlx_library->object.coin[ecx].active = 1;
 	mlx_library->object.coin[ecx].x = x * TILE_WIDTH;
 	mlx_library->object.coin[ecx].y = y * TILE_HEIGHT;
-	mlx_library->object.coin[ecx].texture = mlx_library->texture_pack.coin[0];
 }

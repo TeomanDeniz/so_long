@@ -86,5 +86,6 @@ static inline int
 		out_size += ft_numlen(mlx->object.player.y) + 1;
 	}
 	out_size += ft_numlen((int)mlx->steps) + 1;
+	out_size += ft_numlen((int)mlx->coins) + 1;
 	return (out_size + 3 + 3 + 7 + 9 + 9);
 }

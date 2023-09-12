@@ -22,9 +22,9 @@
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 
-/* *************************** [V] PROTOTYPES [V] *************************** */
+/* **************************** [V] CONSTANTS [V] *************************** */
 #define FILE_GROUND "./textures/xpm/ground.xpm"
-/* *************************** [^] PROTOTYPES [^] *************************** */
+/* **************************** [^] CONSTANTS [^] *************************** */
 
 void
 	load_textures(t_mlx mlx_library)
@@ -39,7 +39,5 @@ void
 	mlx_library->texture_pack.ground = xpm_texture(mlx_library, FILE_GROUND);
 	++*z;
 	if (!(mlx_library->texture_pack.ground))
-		free_textures(mlx, *z);
-	mlx_library->object.player.texture = mlx_library->texture_pack.player[0][0];
-	mlx_library->object.gate.texture = mlx_library->texture_pack.gate[0];
+		free_textures(mlx_library, *z);
 }

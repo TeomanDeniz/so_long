@@ -31,7 +31,7 @@
 #   void set_walls_as_objects(t_mlx);
 #   void set_coins_as_objects(t_mlx);
 #   void load_textures(t_mlx);
-#   void set_map_textures(t_mlx mlx);
+#   void set_map_textures(t_mlx);
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 

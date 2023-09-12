@@ -24,6 +24,7 @@
 */
 #include "../../libft/ft_math/ft_math.h" /*
 # double ft_fabs(double);
+# double ft_fmax(double, double);
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 
@@ -52,7 +53,7 @@ void
 	check_position_coins(mlx);
 	check_position_gate(mlx);
 	check_rotation_player(mlx, delta_x, delta_y);
-	mlx->steps += ft_fabs(delta_x) + ft_fabs(delta_y);
+	mlx->steps += ft_fmax(ft_fabs(delta_x), ft_fabs(delta_y));
 	old_x = mlx->object.player.x;
 	old_y = mlx->object.player.y;
 }

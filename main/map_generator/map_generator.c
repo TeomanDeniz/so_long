@@ -13,8 +13,8 @@
 /* **************************** [V] INCLUDES [V] **************************** */
 #include "../so_long.h" /*
 # define DEBUG_MAP ?
-# define RMG_COIN 1 // %
-# define RMG_WALL 10 // %
+# define RMG_COIN ? // %
+# define RMG_WALL ? // %
 # define RMG_MAP_MAX_WIDTH ?
 # define RMG_MAP_MAX_HEIGHT ?
 # define RMG_MAP_MIN_WIDTH ?

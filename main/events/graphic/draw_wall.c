@@ -14,8 +14,8 @@
 #include "../../so_long.h" /*
 # define TILE_WIDTH ?
 # define TILE_HEIGHT ?
-#   void put_image(t_mlx, void *, int, int);
 #typedef t_mlx;
+#   void put_image(t_mlx, void *, int, int);
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 

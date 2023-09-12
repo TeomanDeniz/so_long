@@ -19,9 +19,9 @@
 # define TS_COIN 6
 # define TS_GATE 5
 # define TS_PLAYER 4
-# define TS_PLAYER_ANI 1
-# define TS_WALL 16
-# define TS_WALL_ANI 1
+# define TS_PLAYER_ANI 3
+# define TS_WALL 18
+# define TS_WALL_ANI 8
 /* ******************** [^] CONSTANTS - TEXTURE SIZES [^] ******************* */
 
 /* ********************** [V] CONSTANTS - IMPORTANT [V] ********************* */
@@ -30,6 +30,10 @@
 # define DEBUG_WALL_FINDER 0
 # define DEBUG_MAP 0
 /* ********************** [^] CONSTANTS - IMPORTANT [^] ********************* */
+
+/* *********************** [V] CONSTANTS - PLAYER [V] *********************** */
+# define PLAYER_SPEED 3.0
+/* *********************** [^] CONSTANTS - PLAYER [^] *********************** */
 
 /* ************************ [V] CONSTANTS - SIZES [V] *********************** */
 # define TILE_WIDTH 16 // X SIZE
@@ -45,9 +49,8 @@
 /* ******************** [^] CONSTANTS - DEVICE SETUP [^] ******************** */
 
 /* ********************* [V] CONSTANTS - GAME SETUP [V] ********************* */
-# define PLAYER_SPEED 3.0
-# define SLICE 0.2
 # define STONE_IN_SEA_AMOUNT 10 // %
+# define SLICE 0.2
 /* ********************* [^] CONSTANTS - GAME SETUP [^] ********************* */
 
 /* ************* [V] CONSTANTS - (R)ANDOM (M)AP (G)ENERATOR [V] ************* */
@@ -114,7 +117,6 @@ typedef struct s_mlx_ptr
 
 /* ***************************** [V] STRUCTS [V] **************************** */
 struct s_player {
-	void	*texture;
 	double	x;
 	double	y;
 	double	target_x;
@@ -124,21 +126,18 @@ struct s_player {
 };
 
 struct s_gate {
-	void	*texture;
 	int		x;
 	int		y;
 	char	active;
 };
 
 struct s_coin {
-	void	*texture;
 	int		x;
 	int		y;
 	char	active;
 };
 
 struct s_wall {
-	void			*texture;
 	int				x;
 	int				y;
 	unsigned char	byte_position;

@@ -17,6 +17,7 @@
 double	ft_lerp(register double x, register double y, register double f);
 int		ft_mini(int max, int min);
 double	ft_fabs(register double x);
+double	ft_fmax(register double x, register double y);
 /* Other functions */
 
 #endif /* FT_MATH_H */
