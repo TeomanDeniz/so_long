@@ -24,6 +24,8 @@
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 
+#include <stdio.h>
+
 void
 	check_if_map_fits(t_mlx mlx_library)
 {
@@ -34,7 +36,7 @@ void
 	map_width = ft_strlen(mlx_library->map[0]);
 	while (mlx_library->map[map_height])
 		++map_height;
-	if ((map_width * TILE_WIDTH) >= PC_WIDTH || \
-		(map_height * TILE_HEIGHT) >= PC_HEIGHT)
+	if (((map_width * TILE_WIDTH) * 2) >= PC_WIDTH || \
+		((map_height * TILE_HEIGHT) * 2) >= PC_HEIGHT)
 		mlx_error(mlx_library, "Map is too big for this PC\n", 1);
 }
