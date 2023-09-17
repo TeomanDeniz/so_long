@@ -22,8 +22,6 @@
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 
-#include <stdio.h>
-
 char
 	**ft_copy_matrix(char **map)
 {

@@ -24,8 +24,6 @@
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 
-#include <stdio.h>
-
 void
 	check_if_map_fits(t_mlx mlx_library)
 {
