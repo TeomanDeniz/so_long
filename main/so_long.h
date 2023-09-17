@@ -205,11 +205,11 @@ extern void	check_ambient_walls(t_mlx mlx_library);
 extern char	check_barriers(t_mlx mlx_library);
 extern int	search_in_map(char **map, char object, char vector);
 extern int	count_in_map(char **map, char object);
-/* ***************************  ./CHECK_MAP  ************************** */
+/* *************************** [^] ./CHECK_MAP [^] ************************** */
 
 /* ************************* [V] ./MAP_GENERATOR [V] ************************ */
 extern void	map_generator(t_mlx mlx_library);
-/* *************************  ./MAP_GENERATOR  ************************ */
+/* ************************* [^] ./MAP_GENERATOR [^] ************************ */
 
 /* **************************** [V] ./EVENTS [V] **************************** */
 extern int	key_down(int key, t_mlx mlx);
@@ -244,39 +244,39 @@ extern void	load_gate(t_mlx mlx_lib, void *texture[TS_GATE], int *z);
 /* ********************* [^] ./SET_MLX/LOAD_TEXTURES [^] ******************** */
 /* *************************** [^] ./SET_MLX [^] **************************** */
 
-/*****************************************************************************\
-|*                        MINILIBX EVENT HOOK LIST                           *|
-|*****************************************************************************|
-|*        02 KeyPress       | 14 NoExpose         | 26 CirculateNotify       *|
-|*        03 KeyRelease     | 15 VisibilityNotify | 27 CirculateRequest      *|
-|*        04 ButtonPress    | 16 CreateNotify     | 28 PropertyNotify        *|
-|*        05 ButtonRelease  | 17 DestroyNotify    | 29 SelectionClear        *|
-|*        06 MotionNotify   | 18 UnmapNotify      | 30 SelectionRequest      *|
-|*        07 EnterNotify    | 19 MapNotify        | 31 SelectionNotify       *|
-|*        08 LeaveNotify    | 20 MapRequest       | 32 ColormapNotify        *|
-|*        09 FocusIn        | 21 ReparentNotify   | 33 ClientMessage         *|
-|*        10 FocusOut       | 22 ConfigureNotify  | 34 MappingNotify         *|
-|*        11 KeymapNotify   | 23 ConfigureRequest | 35 GenericEvent          *|
-|*        12 Expose         | 24 GravityNotify    | 36 LASTEvent             *|
-|*        13 GraphicsExpose | 25 ResizeRequest    |                          *|
-\*****************************************************************************/
+/****************************************************************************\
+|*                        MINILIBX EVENT HOOK LIST                          *|
+|****************************************************************************|
+|*        02 KeyPress       | 14 NoExpose         | 26 CirculateNotify      *|
+|*        03 KeyRelease     | 15 VisibilityNotify | 27 CirculateRequest     *|
+|*        04 ButtonPress    | 16 CreateNotify     | 28 PropertyNotify       *|
+|*        05 ButtonRelease  | 17 DestroyNotify    | 29 SelectionClear       *|
+|*        06 MotionNotify   | 18 UnmapNotify      | 30 SelectionRequest     *|
+|*        07 EnterNotify    | 19 MapNotify        | 31 SelectionNotify      *|
+|*        08 LeaveNotify    | 20 MapRequest       | 32 ColormapNotify       *|
+|*        09 FocusIn        | 21 ReparentNotify   | 33 ClientMessage        *|
+|*        10 FocusOut       | 22 ConfigureNotify  | 34 MappingNotify        *|
+|*        11 KeymapNotify   | 23 ConfigureRequest | 35 GenericEvent         *|
+|*        12 Expose         | 24 GravityNotify    | 36 LASTEvent            *|
+|*        13 GraphicsExpose | 25 ResizeRequest    |                         *|
+\****************************************************************************/
 
-/*****************************************************************************\
-|*                        MINILIBX MASK HOOK LIST                            *|
-|*****************************************************************************|
-|*         (0L) NoEventMask            | (1L<<12) Button5MotionMask          *|
-|*      (1L<<0) KeyPressMask           | (1L<<13) ButtonMotionMask           *|
-|*      (1L<<1) KeyReleaseMask         | (1L<<14) KeymapStateMask            *|
-|*      (1L<<2) ButtonPressMask        | (1L<<15) ExposureMask               *|
-|*      (1L<<3) ButtonReleaseMask      | (1L<<16) VisibilityChangeMask       *|
-|*      (1L<<4) EnterWindowMask        | (1L<<17) StructureNotifyMask        *|
-|*      (1L<<5) LeaveWindowMask        | (1L<<18) ResizeRedirectMask         *|
-|*      (1L<<6) PointerMotionMask      | (1L<<19) SubstructureNotifyMask     *|
-|*      (1L<<7) PointerMotionHintMask  | (1L<<20) SubstructureRedirectMask   *|
-|*      (1L<<8) Button1MotionMask      | (1L<<21) FocusChangeMask            *|
-|*      (1L<<9) Button2MotionMask      | (1L<<22) PropertyChangeMask         *|
-|*     (1L<<10) Button3MotionMask      | (1L<<23) ColormapChangeMask         *|
-|*     (1L<<11) Button4MotionMask      | (1L<<24) OwnerGrabButtonMask        *|
-\*****************************************************************************/
+/****************************************************************************\
+|*                        MINILIBX MASK HOOK LIST                           *|
+|****************************************************************************|
+|*         (0L) NoEventMask            | (1L<<12) Button5MotionMask         *|
+|*      (1L<<0) KeyPressMask           | (1L<<13) ButtonMotionMask          *|
+|*      (1L<<1) KeyReleaseMask         | (1L<<14) KeymapStateMask           *|
+|*      (1L<<2) ButtonPressMask        | (1L<<15) ExposureMask              *|
+|*      (1L<<3) ButtonReleaseMask      | (1L<<16) VisibilityChangeMask      *|
+|*      (1L<<4) EnterWindowMask        | (1L<<17) StructureNotifyMask       *|
+|*      (1L<<5) LeaveWindowMask        | (1L<<18) ResizeRedirectMask        *|
+|*      (1L<<6) PointerMotionMask      | (1L<<19) SubstructureNotifyMask    *|
+|*      (1L<<7) PointerMotionHintMask  | (1L<<20) SubstructureRedirectMask  *|
+|*      (1L<<8) Button1MotionMask      | (1L<<21) FocusChangeMask           *|
+|*      (1L<<9) Button2MotionMask      | (1L<<22) PropertyChangeMask        *|
+|*     (1L<<10) Button3MotionMask      | (1L<<23) ColormapChangeMask        *|
+|*     (1L<<11) Button4MotionMask      | (1L<<24) OwnerGrabButtonMask       *|
+\****************************************************************************/
 
 #endif /* SO_LONG_H */
