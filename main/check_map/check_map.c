@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* **************************** [V] INCLUDES [V] **************************** */
+/* **************************** [v] INCLUDES [v] **************************** */
 #include "../so_long.h" /*
 #typedef t_mlx;
 #    int check_map_file(char *, t_mlx);
@@ -38,8 +38,14 @@
 */
 /* **************************** [^] INCLUDES [^] **************************** */
 
-/* *************************** [V] PROTOTYPES [V] *************************** */
-static inline void	set_map(t_mlx mlx_library, register int map_fd);
+/* **************************** [v] CONSTANTS [v] *************************** */
+#define NEWLINE_ERROR "There is an extra new line at the middle of the map!\n"
+/* **************************** [^] CONSTANTS [^] *************************** */
+
+/* *************************** [v] PROTOTYPES [v] *************************** */
+static void	set_map(t_mlx mlx_library, register int map_fd);
+static char	*map_joinner(int map_fd);
+static int	check_breaker(char *map_out);
 /* *************************** [^] PROTOTYPES [^] *************************** */
 
 void
@@ -49,6 +55,7 @@ void
 
 	map_fd = check_map_file(argc, mlx_library);
 	set_map(mlx_library, map_fd);
+	close(map_fd);
 	check_if_rows_equal(mlx_library);
 	check_if_map_fits(mlx_library);
 	check_gate(mlx_library);
@@ -60,32 +67,71 @@ void
 		mlx_error(mlx_library, "This map is impossible to pass!\n", 1);
 }
 
-static inline void
+static void
 	set_map(t_mlx mlx_library, register int map_fd)
 {
-	char	*line;
-	char	*temp;
 	char	*map_out;
 
-	temp = get_next_line(map_fd);
-	line = malloc(2 * sizeof(char));
-	while (!!temp)
+	map_out = map_joinner(map_fd);
+	if (check_breaker(map_out))
 	{
-		map_out = ft_strjoin(line, temp);
-		if (line)
-			free(line);
-		free(temp);
-		temp = get_next_line(map_fd);
-		if (map_out)
-			line = ft_strdup(map_out);
-		free(map_out);
-		map_out = (void *)0;
+		map_out = (free(map_out), (void *)0);
+		mlx_error(mlx_library, NEWLINE_ERROR, 0);
 	}
-	free((close(map_fd), temp));
-	temp = (void *)0;
-	if (!line)
+	if (!map_out)
 		mlx_error(mlx_library, "Map allocate abort!\n", 0);
-	mlx_library->map = ft_split(line, '\n');
-	free(line);
-	line = (void *)0;
+	mlx_library->map = ft_split(map_out, '\n');
+	if (map_out)
+		map_out = (free(map_out), (void *)0);
+}
+
+static char
+	*map_joinner(int map_fd)
+{
+	char	*temp1;
+	char	*temp2;
+	char	*map_out;
+
+	temp2 = get_next_line(map_fd);
+	map_out = (char [2]){0, 0};
+	while (!!temp2)
+	{
+		temp1 = ft_strjoin(map_out, temp2);
+		if (map_out[0])
+			map_out = (free(map_out), (void *)0);
+		if (!!temp2)
+			free(temp2);
+		temp2 = get_next_line(map_fd);
+		if (!!temp1)
+			map_out = ft_strdup(temp1);
+		if (!!temp1)
+			temp1 = (free(temp1), (void *)0);
+	}
+	if (temp2)
+		temp2 = (free(temp2), (void *)0);
+	return (map_out);
+}
+
+static int
+	check_breaker(char *map_out)
+{
+	register int	ecx;
+	register int	line_size;
+	register char	only_newline;
+
+	ecx = -1;
+	line_size = 0;
+	only_newline = 0;
+	while (++ecx, map_out[ecx])
+	{
+		line_size = 0;
+		while (map_out[line_size + ecx] != '\n' && !!map_out[line_size + ecx])
+			++line_size;
+		if (line_size == 0)
+			only_newline = 1;
+		if (!!line_size && only_newline)
+			return (1);
+		ecx += line_size;
+	}
+	return (0);
 }
