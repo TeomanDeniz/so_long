@@ -17,6 +17,8 @@ But you also can generate a random map via not inputting any `.ber` as argument.
 ./so_long
 ```
 
+You can use multi keys for move across your character. Like: `W` + `D`, `S` + `A` or arrow keys.
+
 # Setup:
 
 Works only in MacOS OpenGL framework. (miniLibX)
