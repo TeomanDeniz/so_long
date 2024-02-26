@@ -1,7 +1,7 @@
 # so_long
 Ecole-42 So_long project with a small physic engine and random map generator.
 
-<P ALIGN="CENTER"><IMG SRC="https://cdn.discordapp.com/attachments/630843149778157623/1152983162289401956/mt.gif"></IMG></P>
+<P ALIGN="CENTER"><IMG SRC="https://cdn.discordapp.com/attachments/630843149778157623/1152983162289401956/mt.gif?ex=65edcbbf&is=65db56bf&hm=0e7cf6373dd7bfea140ef630acb4a44777ac44fbb09d464a80e73a3abddd6008&"></IMG></P>
 
 # Gameplay
 
