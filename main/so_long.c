@@ -29,7 +29,7 @@
 #    int key_up(int, struct s_mlx *);
 #   void mlx_error(t_mlx, char *, char);
 #   void map_generator(t_mlx);
-#   void game(t_mlx mlx);
+#   void game(t_mlx);
 #   void player_position(t_mlx);
 #   void draw_background(t_mlx);
 #   void draw_wall(t_mlx);
