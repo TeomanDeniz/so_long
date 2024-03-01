@@ -49,7 +49,7 @@ There is actually tons of stuffs in this projects.
 
 It generates a random map with a random size that's has random "player, exit" positions, randomly generated walls and coins.
 
-**[ft_rand](https://github.com/TeomanDeniz/so_long/blob/main/libft/ft_rand.c)** is creating a 8192 bytes array fot nothing and gets it's address that was randomly generated in your RAM.
+**[ft_rand](https://github.com/TeomanDeniz/so_long/blob/main/libft/ft_rand.c)** is creating a 8192 bytes array for nothing and gets it's address that was randomly generated in your RAM.
 
 Converts it's address to a number `(long long)` via `union` structure keyword and using this address and a randomizer. Rest of the things like `__TIME__` for just creating even more random numbers for some cases.
 
@@ -114,3 +114,85 @@ So, I thought: Deciding a wall's location would be enough to set it in one byte.
 ###################
 ```
 > And it is going to return: `11010000`, that's means there should be water on the left up side of the texture.
+> 
+> That means `208` in decimal.
+>
+> If also have to evaulate the facts of multi positioning:
+```
+110   110   111   111
+1@0   1@0   1@0   1@0
+000   100   000   100
+```
+> That "corner" textrue must work on all of these types of positions.
+> 
+> So, we just simply use `&` for that:
+```c
+if ((X & 219U) == 219U)
+ // "/" SCISSOR TEXTURE
+if ((X & 208U) == 208U)
+ // LEFT TOP CORNER
+```
+> Is this that simple? Yep.
+
+## Movement
+
+Movement is easy. But soft movement... Well, you need math for that. And a variable type for fractional calculation. So we gonna use `double`! Yay! Cancer.
+
+At **[movement2 example](https://github.com/TeomanDeniz/so_long/blob/main/prototypes/movement2.c)**, I used `lerp` function to make the movement more smoother.
+
+Instead of doing:
+
+```c
+		if (vars->moving[0] == 1)
+			vars->y -= PLAYER_SPEED;
+		if (vars->moving[1] == 1)
+			vars->x -= PLAYER_SPEED;
+		if (vars->moving[2] == 1)
+			vars->y += PLAYER_SPEED;
+		if (vars->moving[3] == 1)
+			vars->x += PLAYER_SPEED;
+```
+
+we are created `target_x` and `target_y` to make the character `x` and `y` smoothly flow at the target points:
+
+```c
+		if (vars->moving[0] == 1)
+			vars->target_y -= PLAYER_SPEED;
+		if (vars->moving[1] == 1)
+			vars->target_x -= PLAYER_SPEED;
+		if (vars->moving[2] == 1)
+			vars->target_y += PLAYER_SPEED;
+		if (vars->moving[3] == 1)
+			vars->target_x += PLAYER_SPEED;
+
+		vars->x = ft_lerp(vars->x, vars->target_x, 0.02);
+		vars->y = ft_lerp(vars->y, vars->target_y, 0.02);
+```
+
+You can assume `0.02` as friction during the floating.
+
+And here ve go! We have a smooth movement like The Binding Of Isaac has!
+
+## Physics
+
+That's easy. At **[movement3 example](https://github.com/TeomanDeniz/so_long/blob/main/prototypes/movement3.c)**, we simply have cubes to make the movement has physics.
+
+But how?
+
+We created a custom struct:
+
+```c
+struct s_barrier
+{
+	int		start_x;
+	int		start_y;
+	int		end_x;
+	int		end_y;
+};
+```
+
+We just simply control if the moving target coordinates are in the barrier coordinates. If it is, then don't move the target coordinates. And that's it.
+
+## Enemy AI
+
+There is literally nothing in enemy AI. They are moving randomly in random directions. They are literally walking meats. XD
